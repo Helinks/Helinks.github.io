@@ -1,0 +1,38 @@
+.answerBtn{
+    width: 90px;
+    height: 30px;
+    background: yellow;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    border-radius: 20px;
+}
+.showBtn{
+    width: 90px;
+    height: 30px;
+    background: yellow;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    right: 0%;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 20px;
+}
+.hideBtn{
+    display: none;
+}
+
+.hide{
+    display:none;
+}
+.show{
+    display:block;
+}
+
