@@ -7,9 +7,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: absolute;
     border-radius: 20px;
+    margin-bottom: 10px;
 }
+
 .showBtn{
     width: 90px;
     height: 30px;
@@ -35,4 +36,26 @@
 .show{
     display:block;
 }
+
+.hideAnswers{
+    display: none;
+}
+.showAnswers{
+    display: flex;
+}
+
+.showAnswers div{
+   text-align: center;
+   border-radius: 25px;
+   width: 200px;
+   background-color: cadetblue;
+   height: 300px;
+   margin: 20px;
+}
+.showAnswers div:hover{
+    background-color:chartreuse;
+    cursor: pointer;
+ }
+
+
 
