@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Helinks</title>
 </head>
 <body>
@@ -15,6 +16,8 @@
       más creativo e interactivo. Aquí uno es mas libre para ser creativo. 
     </p>
 
+    <button class="showBtn" id="rdMore_btn">Leer mas</button>
+
     <span class="hide" id="hidenText">
         <p>
           Debo decir que me gustaría hacer otro vortex, no estoy seguro si esa sea la palabra adecuada para este contexto, pero si me gustaría.
@@ -23,15 +26,155 @@
           <br>
           Presiona en el boton "Responder"
         </p>
-        <div class="answerBtn" id="answers">Responder</div>
+        <button class="answerBtn" id="answers">Responder</button>
         <span class="hideAnswers" id="hideAnswers">
-            <div id="answerDate">Si</div>
-            <div id="answerDate">No</div>
+            <button id="answerDate1" class="answerNoSelected">Si</button>
+            <button id="answerDate2" class="answerNoSelected" >No</button>
+
+            <button id="next" class="next" disabled>siguiente</button>
+            
         </span>
+        <span class="hideAnswerY" id="answerY">
+          <p>Me da mucho gusto que hayas aceptado mi propuesta.
+            <br>
+            Estuve hechando cabeza a que lugar te podría parecer mejor, a continuación se verán los diferentes lugares que tenia en mente con una descripción del porque lo tome en cuenta, me gustaría saber si alguno te parece bien, 
+            en caso de que no tambien podrías mencionar otro que te parezca seleccionando la opción "otro". 
+            <br>
+            (La opción que selecciones me va llegar a mi correo)  
+            <br>
+            <br>
+            <div id="seePlaces"><b>Ver lugares</b></div>
+          </p>
+            <span id="hidePlaces" class="hidePlaces">
+              
+                
+              <label id="placeSelected1" class="place"><input type="radio" name="place" value="El chorro de quevedo"><div><h3>El chorro de quevedo</h3>
+                  
+                  <p>
+                      Escogí este lugar porque ha sido un lugar que me lo han mencionado mucho y el año pasado tuve muchas oportunidades de ir pero siempre se presentaba algún incoveninte para ir, el chorro de quevedo 
+                      a mi parecer me parece  un lugar bastante historico y simbolico, ademas, también recuerdo que estaba en alguna lista de cosas por hacer y sé que lo conoces como la palma de tu mano. 
+          
+                     </p>
+                    </div>
+              </label>      
+                
+                    <label id="placeSelected2" class="place"><input type="radio" name="place" value="El parque de la 93"><div ><h3>El parque de la 93</h3>
+                      
+                  <p>
+                    Escogí este lugar porque me lo habián mencionado y me parecio interesante ir, me dijeron que era bastante bonito y turistico, pero en realidad no he ido ni me he acercado, 
+                    casí igual que con el chorro de quevedo tuve oportunidades de ir, esta vez con samuel pero no se planeo nada finalmente.
+                    Me parece un lugar interesante viendo fotos del lugar. 
+                  </p>
+                </div>
+              </label>
+                <label id="placeSelected3" class="place"><input type="radio" name="place" value="Interestellar en cine"><div ><h3>Interestellar en cine</h3>
+                  
+                  <p>
+                    Esta opción si es un poco mas común y quiza no tan "interesante" que las anteriores sin embargo este año se reestreno esta pelicula en los cines debido a que hace 10 años fue 
+                    su lanzamiento y está en varios cines de bogotá. La trama de la pelicula es bastante buena y con una trama de viajes en el espacio y en el tiempo, la quinta dimension y 
+                    otros datos interesantes.
+                    <br>
+                    Una desventaja es que la función de esta pelicula mas temprana es a las 5 de la tarde un horario tarde. 
+                  </p>              
+                </div>
+              </label>
+                <label id="placeSelected4" class="place"><input type="radio" name="place" value="Otro"><div ><h3>Otro</h3>
+                  
+                  <p>Si deseas mencionar otro lugar me lo podrías mencionar:</p>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="width: 300px;"></textarea>
+                    <label for="floatingTextarea2">Describe otro lugar</label>
+                  </div>
+                </div>
+              </label>
+  
+                <button type="button" class="btn btn-warning" id="sendButton" data-bs-toggle="modal" data-bs-target="#staticBackdrop-1">
+                  Enviar
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p>He recibido tu respuesta, muy pronto recibiras una de parte mia.
+                          <br>
+                          <br>
+                          Sé que esta manera de invitarte a salir es un poco extraña, pero simplemente se me ocurrio y quise intentarlo. Espero no haya sido muy confuso 
+                          la interacción.
+                          <br>
+                          <br>
+                          Sí deseas comentarme algo lo puedes hacer en la caja de comentarios
+                          <br>
+                          <br>
+                           Si no es el caso solo cierra la ventana
+                           <br>
+                          <br>
+                           ATT: Kevin Aroca
+                        </p>
+
+                        <div class="form-floating">
+                          <textarea class="form-control" placeholder="Leave a comment here" id="commentY" style="height: 100px"></textarea>
+                          <label for="commentY">Comentarios</label>
+                        </div>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="sendCommentY" disabled>Enviar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+            </span>
+            
+                      
+           
+
+        </span>
+
+        <span class="hideAnswerN" id="answerN">
+        <div class="modal fade" id="staticBackdrop-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+              </div>
+              <div class="modal-body">
+                <p>Vale no pasa nada, te agradezco de todas maneras por haberte tomado el tiempo de entrar al link.
+                  <br>
+                  Sí deseas adicionar algo mas lo puedes hacer en la caja de comentarios.
+                  <br>
+                  Si no es el caso solo cierra la ventana 
+                </p>
+
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="comment" style="height: 100px"></textarea>
+                  <label for="comment">Comentario</label>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="sendComment" disabled>Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
         
     </span>
 
-    <div class="showBtn" id="rdMore_btn">Leer mas</div>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/sendComments.js"></script>
+<script src="js/sendAnswer.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

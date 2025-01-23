@@ -42,20 +42,57 @@
 }
 .showAnswers{
     display: flex;
+    align-items: center;
 }
 
-.showAnswers div{
+
+
+.answerNoSelected{
+   display: flex;
+   justify-content: center;
+   align-items: center;
    text-align: center;
-   border-radius: 25px;
+   border-radius: 20px;
    width: 200px;
    background-color: cadetblue;
-   height: 300px;
+   height: 50px;
    margin: 20px;
 }
-.showAnswers div:hover{
+.answerNoSelected:hover{
     background-color:chartreuse;
     cursor: pointer;
  }
+ .answerSelected{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    width: 200px;
+    background-color: chartreuse;
+    height: 50px;
+    margin: 20px;
+ }
+ .hideAnswerY{
+    display: none;
+ }
+ .showAnswerY{
+    display: contents;
+ }
 
-
+ .hidePlaces{
+    display: none;
+ }
+ .showPlaces{
+    display: contents;
+ }
+ .place{
+    margin: 20px;
+    background-color: orange;
+    border-radius: 5px;
+ }
+ .place:hover{
+    background-color: rgb(245, 189, 85);
+    cursor: pointer;
+ }
 
