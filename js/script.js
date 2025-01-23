@@ -48,7 +48,8 @@ seePlaces.addEventListener('click',sPlaces);
 
 // Muestra el primer texto oculto
 function toggleText (){
-    hidenText.classList.toggle('show');
+    hidenText.classList.remove('hide');
+    hidenText.classList.add('show');
     
     if(hidenText.classList.contains('show')){
         hideBtn.classList.toggle('hideBtn');
@@ -60,7 +61,8 @@ function toggleText (){
 
 // Muestra las opciones "Si" o "No" ocultas
 function toggleAnswers (){
-    hidenAnswers.classList.toggle('showAnswers')
+    hidenAnswers.classList.remove('hideAnswers')
+    hidenAnswers.classList.add('showAnswers')
 }
 
 // Cmabia las clases de las opciones "Si" o "No" para identificar cual se selecciono DE MANERA VISUAL solo cambiando los colores 
@@ -85,13 +87,13 @@ function stateBtn(){
 function confirm(){
     
     if(answerDate1.classList.contains("answerSelected")){
-        answerY.classList.toggle("showAnswerY");
+        answerY.classList.remove("hideAnswerY");
+        answerY.classList.add("showAnswerY");
         answerDate1.disabled=true;
         answerDate2.disabled=true;
         nextBtn.disabled=true;
     }
     else if(answerDate2.classList.contains("answerSelected")){
-        answerY.classList.toggle("showAnswerN");
         answerDate1.disabled=true;
         answerDate2.disabled=true;
         nextBtn.disabled=true;

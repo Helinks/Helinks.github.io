@@ -8,27 +8,43 @@
     <title>Helinks</title>
 </head>
 <body>
-    <h1>Hola que tal </h1>
+  <nav class="navbar bg-dark ">
+    <div class="container-fluid">
+      <span class="navbar-brand text-light" >To: Luna / Linn</span>
+    </div>
+  </nav>
+  <br>
+  
+
+    <h1>Hello... </h1>
     <p>
-      Admito que esta forma de comunicarme es extraña aún mas poco común que por correo.
+      Soy conciente que esto te parezca extraño y bastante poco común. Mas poco común que hablar por correo.
       <br>    
-      Esta vez si tengo tu número sin embargo no estuve seguro de hacerte esta invitación por whatsApp, no supe como. También lo quería hacer de una manera 
-      más creativa e interactiva. Aquí uno es mas libre para ser creativo pero que dolor de cabeza para logica.
+      Pude haberte escrito por whatsApp pero quería hacer de esta invitación algo
+      más original, creativo e interactivo. Aquí uno es mas libre de agregar y hacer lo que quiera pero debo admitir aunque es un dolor de cabeza hacer la logica de la pagina.
+      <br>
+      Y sí te lo preguntas, si, esta pagina es obra mia, creada desde cero, simplemente se me ocurrio y quise intentarlo, algo sencillo y minimalista.
     </p>
 
     <button class="showBtn" id="rdMore_btn">Leer mas</button>
 
     <span class="hide" id="hidenText">
         <p>
-          Debo decir que me gustaría hacer otro vortex, no estoy seguro si esa sea la palabra adecuada para este contexto, pero si me gustaría.
+          La razón de hacer esto es que como ya lo había mencionado antes, quiero hacerte una invitación. 
           <br>
-          Voy a atreverme a preguntarte ahorita mismo si te parece la idea.
+          Debo decir que me gustaría realizar otro vortex, no estoy seguro sí esa sea la palabra adecuada para este contexto, pero si me gustaría. 
           <br>
-          Presiona en el boton "Responder"
+          No sé tu que opinas al respecto asi que utilizando la tecnología moderna voy a preguntarte si te gustaría hacer nuevamente un vortex.
+          <br>
+          <br>
+          Para responder solo presiona en el boton "Responder"
         </p>
         <button class="answerBtn" id="answers">Responder</button>
         <span class="hideAnswers" id="hideAnswers">
-          <h4>Escoge libremente, no te preocupes.</h4>
+          <br>
+          <br>
+          <h4>¿Te gustaría hacer nuevamente un vortex?</h4>
+          <h6>Escoge libremente, no te preocupes.</h6>
             <button id="answerDate1" class="answerNoSelected">Si</button>
             <button id="answerDate2" class="answerNoSelected" >No</button>
 
@@ -47,7 +63,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="confirm">Si</button>
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal" id="confirm"><a href="#answerY">Si</a></button>
                   </div>
                 </div>
               </div>
@@ -55,19 +71,27 @@
             
         </span>
         <span class="hideAnswerY" id="answerY">
+          <br>
+          <br>
           <p>Me da mucho gusto que hayas aceptado mi propuesta.
             <br>
-            Estuve hechando cabeza a que lugar te podría parecer mejor, a continuación se verán los diferentes lugares que tenia en mente con una descripción del porque lo tome en cuenta, me gustaría saber si alguno te parece bien, 
-            en caso de que no tambien podrías mencionar otro que te parezca seleccionando la opción "otro". 
-            <br>
-            (La opción que selecciones me va llegar a mi correo)  
+            Estuve pensando en que lugar te puede parecer mejor, pero no se cual te parezca
             <br>
             <br>
-            <div id="seePlaces"><b>Ver lugares</b></div>
+            hmm... 
+            <br>
+            <br>
+            Ya se
+            <br>
+            <br>
+            A continuación se verán los diferentes lugares que tengo en mente con una descripción del porque lo tome en cuenta, escoge uno y presiona en el boton enviar que aparece en lo ultimo,  
+            en caso de que no te llame la atención alguno puedes seleccionar "otro" y mencionar otro lugar (La opción que selecciones me va a llegar a mí). 
+            <br>
+            <br>
+            Presiona en "Ver lugares".
+            <div id="seePlaces"><b><a href="#hidePlaces">Ver lugares</a></b></div>
           </p>
             <span id="hidePlaces" class="hidePlaces">
-              
-                
               <label id="placeSelected1" class="place" data-value="El chorro de quevedo"><input type="radio" name="place" value="El chorro de quevedo"><div><h3>El chorro de quevedo</h3>
                   
                   <p>
@@ -75,7 +99,7 @@
                       a mi parecer me parece  un lugar bastante historico y simbolico, ademas, también recuerdo que estaba en alguna lista de cosas por hacer y sé que lo conoces como la palma de tu mano. 
           
                      </p>
-                    </div>
+                    </div><img src="img/chorroQuevedo.png" alt="Chorro de quevedo">
               </label>      
                 
                     <label id="placeSelected2" class="place" data-value="El parque de la 93"><input type="radio" name="place" value="El parque de la 93"><div ><h3>El parque de la 93</h3>
@@ -85,22 +109,22 @@
                     casí igual que con el chorro de quevedo tuve oportunidades de ir, esta vez con samuel pero no se planeo nada finalmente.
                     Me parece un lugar interesante viendo fotos del lugar. 
                   </p>
-                </div>
+                </div><img src="img/parque93.png" alt="Chorro de quevedo">
               </label>
                 <label id="placeSelected3" class="place" data-value="Interestellar en cine"><input type="radio" name="place" value="Interestellar en cine"><div ><h3>Interestellar en cine</h3>
                   
                   <p>
                     Esta opción si es un poco mas común y quiza no tan "interesante" que las anteriores sin embargo este año se reestreno esta pelicula en los cines debido a que hace 10 años fue 
-                    su lanzamiento y está en varios cines de bogotá. La trama de la pelicula es bastante buena y con una trama de viajes en el espacio y en el tiempo, la quinta dimension y 
-                    otros datos interesantes.
+                    su lanzamiento y está en varios cines de bogotá. La trama de la pelicula es bastante buena y con una trama de viajes en el espacio, en el tiempo y 
+                    bueno ya sabes como me gusta los viajes en el tiempo.
                     <br>
                     Una desventaja es que la función de esta pelicula mas temprana es a las 5 de la tarde un horario tarde. 
                   </p>              
-                </div>
+                </div><img src="img/interestellar.jpg" alt="Chorro de quevedo">
               </label>
                 <label id="placeSelected4" class="place" data-value="otro"><input type="radio" name="place" value="Otro"><div ><h3>Otro</h3>
                   
-                  <p>Si deseas mencionar otro lugar me lo podrías mencionar:</p>
+                  <p>Si deseas mencionar otro lugar me lo podrías hacer saber:</p>
                   <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="width: 300px;" disabled></textarea>
                     <label for="floatingTextarea2">Describe otro lugar</label>
@@ -117,7 +141,7 @@
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Recibido </h1>
                       </div>
                       <div class="modal-body">
                         <p>He recibido tu respuesta, muy pronto recibiras una de parte mia.
@@ -144,7 +168,7 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary" id="sendCommentY" disabled>Enviar</button>
+                        <button type="button" class="btn btn-warning" id="sendCommentY" disabled>Enviar</button>
                       </div>
                     </div>
                   </div>
@@ -162,12 +186,12 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">No te preocupes</h1>
               </div>
               <div class="modal-body">
-                <p>Vale no pasa nada, te agradezco de todas maneras por haberte tomado el tiempo de entrar al link.
+                <p>Vale no pasa nada, te agradezco de todas maneras por haberte tomado el tiempo de leer el texto.
                   <br>
-                  Sí deseas adicionar algo mas lo puedes hacer en la caja de comentarios.
+                  Sí quieres decir algo lo puedes hacer abajo.
                   <br>
                   Si no es el caso solo cierra la ventana 
                 </p>
@@ -180,7 +204,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary" id="sendComment" disabled>Enviar</button>
+                <button type="button" class="btn btn-warning" id="sendComment" disabled>Enviar</button>
               </div>
             </div>
           </div>
@@ -188,6 +212,10 @@
       </span>
         
     </span>
+
+    <footer>
+
+    </footer>
 
     <script type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
