@@ -12,8 +12,8 @@
     <p>
       Admito que esta forma de comunicarme es extraña aún mas poco común que por correo.
       <br>    
-      Esta vez si tengo tu número sin embargo no estuve seguro de hacerte esta invitación por whatsApp, no sentí que fuera lo mio. También lo quería hacer de una manera 
-      más creativo e interactivo. Aquí uno es mas libre para ser creativo. 
+      Esta vez si tengo tu número sin embargo no estuve seguro de hacerte esta invitación por whatsApp, no supe como. También lo quería hacer de una manera 
+      más creativa e interactiva. Aquí uno es mas libre para ser creativo pero que dolor de cabeza para logica.
     </p>
 
     <button class="showBtn" id="rdMore_btn">Leer mas</button>
@@ -28,10 +28,30 @@
         </p>
         <button class="answerBtn" id="answers">Responder</button>
         <span class="hideAnswers" id="hideAnswers">
+          <h4>Escoge libremente, no te preocupes.</h4>
             <button id="answerDate1" class="answerNoSelected">Si</button>
             <button id="answerDate2" class="answerNoSelected" >No</button>
 
-            <button id="next" class="next" disabled>siguiente</button>
+            <button id="next" class="next" data-bs-toggle="modal" data-bs-target="#confirmacion" disabled>siguiente</button>
+
+            <div class="modal fade" id="confirmacion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Ventana de confirmación</h1>
+                  </div>
+                  <div class="modal-body">
+                    
+                    ¿Estas segura?
+    
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="confirm">Si</button>
+                  </div>
+                </div>
+              </div>
+            </div>
             
         </span>
         <span class="hideAnswerY" id="answerY">
@@ -48,7 +68,7 @@
             <span id="hidePlaces" class="hidePlaces">
               
                 
-              <label id="placeSelected1" class="place"><input type="radio" name="place" value="El chorro de quevedo"><div><h3>El chorro de quevedo</h3>
+              <label id="placeSelected1" class="place" data-value="El chorro de quevedo"><input type="radio" name="place" value="El chorro de quevedo"><div><h3>El chorro de quevedo</h3>
                   
                   <p>
                       Escogí este lugar porque ha sido un lugar que me lo han mencionado mucho y el año pasado tuve muchas oportunidades de ir pero siempre se presentaba algún incoveninte para ir, el chorro de quevedo 
@@ -58,7 +78,7 @@
                     </div>
               </label>      
                 
-                    <label id="placeSelected2" class="place"><input type="radio" name="place" value="El parque de la 93"><div ><h3>El parque de la 93</h3>
+                    <label id="placeSelected2" class="place" data-value="El parque de la 93"><input type="radio" name="place" value="El parque de la 93"><div ><h3>El parque de la 93</h3>
                       
                   <p>
                     Escogí este lugar porque me lo habián mencionado y me parecio interesante ir, me dijeron que era bastante bonito y turistico, pero en realidad no he ido ni me he acercado, 
@@ -67,7 +87,7 @@
                   </p>
                 </div>
               </label>
-                <label id="placeSelected3" class="place"><input type="radio" name="place" value="Interestellar en cine"><div ><h3>Interestellar en cine</h3>
+                <label id="placeSelected3" class="place" data-value="Interestellar en cine"><input type="radio" name="place" value="Interestellar en cine"><div ><h3>Interestellar en cine</h3>
                   
                   <p>
                     Esta opción si es un poco mas común y quiza no tan "interesante" que las anteriores sin embargo este año se reestreno esta pelicula en los cines debido a que hace 10 años fue 
@@ -78,17 +98,17 @@
                   </p>              
                 </div>
               </label>
-                <label id="placeSelected4" class="place"><input type="radio" name="place" value="Otro"><div ><h3>Otro</h3>
+                <label id="placeSelected4" class="place" data-value="otro"><input type="radio" name="place" value="Otro"><div ><h3>Otro</h3>
                   
                   <p>Si deseas mencionar otro lugar me lo podrías mencionar:</p>
                   <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="width: 300px;"></textarea>
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="width: 300px;" disabled></textarea>
                     <label for="floatingTextarea2">Describe otro lugar</label>
                   </div>
                 </div>
               </label>
   
-                <button type="button" class="btn btn-warning" id="sendButton" data-bs-toggle="modal" data-bs-target="#staticBackdrop-1">
+                <button type="button" class="btn btn-warning" id="sendButton" data-bs-toggle="modal" data-bs-target="#staticBackdrop-1" disabled>
                   Enviar
                 </button>
                 
@@ -98,7 +118,6 @@
                     <div class="modal-content">
                       <div class="modal-header">
                         <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
                         <p>He recibido tu respuesta, muy pronto recibiras una de parte mia.

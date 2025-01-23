@@ -8,9 +8,10 @@ const hidenText = document.getElementById('hidenText');
 const answers = document.getElementById('answers');
 // variable de las opciones "si" o "no" ocultas
 const hidenAnswers = document.getElementById('hideAnswers');
+// Variable de boton si de la ventana de confirmación
+const confirmBtn = document.getElementById('confirm');
 // Variable de boton siguiente
 const nextBtn = document.getElementById('next');
-
 // Variable de opción "Si"
 const answerDate1 = document.getElementById('answerDate1');
 // Variable de opción "No"
@@ -22,10 +23,17 @@ const Places= document.getElementById('hidePlaces');
 // Variables de las respuestas a mostrar de acuerdo a la opción sea escogida
 const answerY =document.getElementById('answerY');
 const answerN =document.getElementById('answerN');
-
+// Varaibles de las respuestas escogidas
+const placeInputs =document.querySelectorAll(`input[name="place"]`);
+// Variable para el boton de enviar el lugar escogido
+const sendBtn = document.getElementById("sendButton");
+// Variable de texto de "otro"
+const textArea = document.getElementById('floatingTextarea2');
 
 // CLICKEAR
 
+// Clicker una de las opciones de los lugares
+placeInputs.forEach((input) => input.addEventListener('change',boxCommentAndSendBtn))
 // Clickear boton leer mas activa funcion "toggleText"
 hideBtn.addEventListener('click',toggleText);
 // Clickear responder activa funcion "toggleAnswers"
@@ -34,9 +42,9 @@ answers.addEventListener('click',toggleAnswers);
 answerDate1.addEventListener('click', () => handleAnswerSelection(answerDate1, answerDate2));
 answerDate2.addEventListener('click', () => handleAnswerSelection(answerDate2, answerDate1));
 // Clickear siguiente activa funcion "stateBtn"
-nextBtn.addEventListener('click',next);
-
-seePlaces.addEventListener('click',sPlaces)
+confirmBtn.addEventListener('click',confirm);
+// Clickear "Ver lugares"
+seePlaces.addEventListener('click',sPlaces);
 
 // Muestra el primer texto oculto
 function toggleText (){
@@ -74,12 +82,19 @@ function stateBtn(){
 
 }
 
-function next(){
-    if(answerDate1.classList.contains("answerSelected") && nextBtn.disabled===false){
-        answerY.classList.toggle("showAnswerY")
+function confirm(){
+    
+    if(answerDate1.classList.contains("answerSelected")){
+        answerY.classList.toggle("showAnswerY");
+        answerDate1.disabled=true;
+        answerDate2.disabled=true;
+        nextBtn.disabled=true;
     }
-    else if(answerDate2.classList.contains("answerSelected") && nextBtn.disabled===false){
-        answerY.classList.toggle("showAnswerN")
+    else if(answerDate2.classList.contains("answerSelected")){
+        answerY.classList.toggle("showAnswerN");
+        answerDate1.disabled=true;
+        answerDate2.disabled=true;
+        nextBtn.disabled=true;
 
         const modal= new bootstrap.Modal(document.getElementById('staticBackdrop-2'));
         modal.show();
@@ -88,5 +103,46 @@ function next(){
 
 // Muestra los lugares al presionar "Ver lugares"
 function sPlaces(){
-    Places.classList.toggle('showPlaces')
+    
+    if(Places.classList.contains('hidePlaces')){
+        Places.classList.remove('hidePlaces')
+        Places.classList.add('showPlaces')
+    }else if(Places.classList.contains('showPlaces')){
+        Places.classList.remove('showPlaces')
+        Places.classList.add('hidePlaces')
+        textArea.value="";
+        placeInputs.forEach((input) => {
+            input.checked = false;
+        });
+    }
 }
+
+
+
+// Habilitar y deshabilitar caja de comentraios para la opción "otro"
+function boxCommentAndSendBtn(){
+    const selectedPlace=Array.from(placeInputs).find((input) => input.checked);
+    
+
+    if(selectedPlace && selectedPlace.value !=='Otro'){
+        sendBtn.disabled=false;     
+        textArea.disabled=true; 
+    }
+    else if(selectedPlace.value ==='Otro'){
+            sendBtn.disabled=true;
+            textArea.disabled=false;   
+            textArea.addEventListener("input", ()=>{
+                if(textArea.value.trim() === ""){
+                    sendBtn.disabled=true
+                }
+                else{
+                    sendBtn.disabled=false
+                }
+                
+            }) 
+        
+    }
+
+    
+};
+

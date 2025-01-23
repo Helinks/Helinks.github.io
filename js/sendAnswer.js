@@ -5,6 +5,7 @@ document.getElementById('sendButton').addEventListener("click", function(){
 
   if(place=='Otro'){
     place += ': ' + document.getElementById('floatingTextarea2').value;
+    
   }
 
   const templateParams ={
