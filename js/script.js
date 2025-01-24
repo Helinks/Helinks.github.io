@@ -1,3 +1,5 @@
+emailjs.init('XAB4HqREYjlhJ8bvO');
+
 // VARIABLES
 // variable de boton leer mas
 const hideBtn = document.getElementById('rdMore_btn');
@@ -97,6 +99,21 @@ function confirm(){
         answerDate1.disabled=true;
         answerDate2.disabled=true;
         nextBtn.disabled=true;
+         const selectedAnswer = answerDate2.value;
+         const templateParams ={
+              message: `Has recibido respuesta a tu invitación. \n`+`Lamentablemente ${selectedAnswer} aceptaron tu invitacion`
+            };
+            const serviceID = 'default_service';
+            const templateID = 'template_i6ysvyw';
+          
+            emailjs.send(serviceID, templateID, templateParams)
+              .then(() => {
+              }) 
+              .catch(error=>{
+                alert('Error al enviar ' + error.text)
+              })
+          
+         
 
         const modal= new bootstrap.Modal(document.getElementById('staticBackdrop-2'));
         modal.show();

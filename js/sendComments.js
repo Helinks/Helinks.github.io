@@ -36,7 +36,8 @@ document.getElementById('sendComment').addEventListener("click", function(){
       .then(() => {
         btn.disabled=true;
         eComment.disabled=true;
-        alert('Sent!');
+        alert('Comentario enviado');
+        window.location.href = 'https://www.youtube.com/watch?v=ZEcqHA7dbwM/';
       }) 
       .catch(error=>{
         alert('Error al enviar ' + error.text)
@@ -56,7 +57,8 @@ document.getElementById('sendComment').addEventListener("click", function(){
       .then(() => {
         btnY.disabled=true;
         eCommentY.disabled=true;
-        alert('Sent!');
+        alert('Comentario enviado');
+        window.location.href = 'https://www.youtube.com/watch?v=ZEcqHA7dbwM/';
       }) 
       .catch(error=>{
         alert('Error al enviar ' + error.text)

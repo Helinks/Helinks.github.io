@@ -8,222 +8,221 @@
     <title>Helinks</title>
 </head>
 <body>
-  <nav class="navbar bg-dark ">
+  <nav class="navbar bg-dark">
     <div class="container-fluid">
-      <span class="navbar-brand text-light" >To: Luna / Linn</span>
+      <span class="navbar-brand text-light">To: Luna / Linn </span>
     </div>
   </nav>
   <br>
-  
 
-    <h1>Hello... </h1>
-    <p>
-      Soy conciente que esto te parezca extraño y bastante poco común. Más poco común que hablar por correo.
-      <br>    
-      Pude haberte escrito por whatsApp pero quería hacer de esta invitación algo
-      más original, creativo e interactivo. Aquí uno es mas libre de agregar y hacer lo que quiera aunque es un dolor de cabeza hacer la lógica de la pagina.
+  <h1>Hello...</h1>
+  (Sí ya respondiste esta invitación te recomiendo no hacerlo nuevamente)
+  <br>
+  <br>
+  <p>
+      Esto puede parecerte extraño y bastante poco común, más raro incluso que hablar por correo.
       <br>
-      Y sí te lo preguntas, si, esta pagina es obra mia, creada desde cero, simplemente se me ocurrio y quise intentarlo, algo sencillo y minimalista.
-    </p>
+      Pude haberte escrito por WhatsApp, pero quería hacer de esta invitación algo más original, creativo e interactivo. Aquí uno es más libre de agregar y hacer lo que quiera, aunque es un dolor de cabeza trabajar en la lógica de la página.
+      <br>
+      Y si te lo preguntas, sí, creé esta pagina desde cero. Simplemente se me ocurrió y quise intentarlo, algo sencillo y minimalista.
+  </p>
 
-    <button class="showBtn" id="rdMore_btn">Leer mas</button>
+  <button class="showBtn" id="rdMore_btn">Leer más</button>
 
-    <span class="hide" id="hidenText">
-        <p>
-          La razón de hacer esto es que quiero hacerte una invitación. 
+  <span class="hide" id="hidenText">
+      <p>
+          La razón de hacer esto es que quería hacerte una invitación. 
           <br>
-          Debo decir que me gustaría realizar otro vortex, no estoy seguro sí esa sea la palabra adecuada, pero si me gustaría. 
+          Debo decir que me gustaría realizar otro "vortex" es decir salír otra vez. No estoy seguro si esa sea la palabra adecuada, pero creo que entiendes el significado. 
           <br>
-          No sé tu que opinas al respecto, ¿Te gustaría?
+          No sé qué opinas al respecto. ¿Te gustaría?
           <br>
-          Bueno, si quieres lo puedes responder ahora. 
-          <br>
-          <br>
-          Para responder solo presiona en el boton "Responder"
-        </p>
-        <button class="answerBtn" id="answers"><a href="#hideAnswers">Responder</a></button>
-        <span class="hideAnswers" id="hideAnswers">
+          Bueno, si quieres, puedes responder ahora.
           <br>
           <br>
-          <h4>¿Te gustaría hacer nuevamente un vortex?</h4>
-          <h6>Escoge libremente</h6>
-            <button id="answerDate1" class="answerNoSelected">Si</button>
-            <button id="answerDate2" class="answerNoSelected" >No</button>
+          Para responder, solo presiona el botón "Responder".
+      </p>
+      <button class="answerBtn" id="answers"><a href="#hideAnswers">Responder</a></button>
+      <span class="hideAnswers" id="hideAnswers">
+          <br>
+          <br>
+          <h4>¿Te gustaría salír?</h4>
 
-            <button id="next" class="next" data-bs-toggle="modal" data-bs-target="#confirmacion" disabled>siguiente</button>
+          <button id="answerDate1" class="answerNoSelected" value="si">Sí</button>
+          <button id="answerDate2" class="answerNoSelected" value="No">No</button>
 
-            <div class="modal fade" id="confirmacion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <button id="next" class="next" data-bs-toggle="modal" data-bs-target="#confirmacion" disabled>Siguiente</button>
+
+          <div class="modal fade" id="confirmacion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Ventana de confirmación</h1>
+                      </div>
+                      <div class="modal-body">
+                          Presiona <b>Confirmar</b> para enviar tu respuesta.
+                      </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                          <button type="button" class="btn btn-warning" data-bs-dismiss="modal" id="confirm"><a href="#answerY">Confirmar</a></button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </span>
+      <span class="hideAnswerY" id="answerY">
+          <br>
+          <br>
+          <p>Me alegra mucho que hayas aceptado mi propuesta.
+              <br>
+              Estuve pensando en un par de lugares, pero no estoy seguro de cuál prefieres.
+              <br>
+              <br>
+              Hmm...
+              <br>
+              <br>
+              Ya sé
+              <br>
+              <br>
+              A continuación, verás los diferentes lugares que tengo en mente, con una breve descripción de por qué los elegí. Escoje uno y presiona el botón "Enviar" al final. 
+              Si ninguno te llama la atención, puedes seleccionar "Otro" y mencionar un lugar diferente. (La opción que elijas me llegará directamente).
+              <br>
+              <br>
+              Presiona en "Ver lugares".
+              <div id="seePlaces"><b><a href="#hidePlaces">Ver lugares</a></b></div>
+          </p>
+          <span id="hidePlaces" class="hidePlaces">
+            <label id="placeSelected1" class="place" data-value="El chorro de quevedo">
+              <input type="radio" name="place" value="El chorro de quevedo">
+              <div>
+                <h3>El chorro de quevedo</h3>
+                <p>
+                  Escogí este lugar porque ha sido un lugar que me han mencionado mucho y el año pasado tuve muchas oportunidades de ir, pero siempre se presentaba algún inconveniente para hacerlo. El Chorro de Quevedo, a mi parecer, es un lugar bastante histórico y simbólico. Además, también recuerdo que estaba en alguna lista de cosas por hacer, y sé que lo conoces como la palma de tu mano.
+                </p>
+              </div>
+              <img src="img/chorroQuevedo.png" alt="Chorro de quevedo">
+            </label>
+          
+            <label id="placeSelected2" class="place" data-value="El parque de la 93">
+              <input type="radio" name="place" value="El parque de la 93">
+              <div>
+                <h3>El parque de la 93</h3>
+                <p>
+                  Escogí este lugar porque me lo habían mencionado y me pareció interesante. Me dijeron que era bastante bonito y turístico, pero en realidad no he ido ni me he acercado. Casi igual que con el Chorro de Quevedo, tuve oportunidades de ir, esta vez con Samuel, pero finalmente no se planeó nada. Me parece un lugar interesante al ver fotos del lugar.
+                </p>
+              </div>
+              <img src="img/parque93.png" alt="Chorro de quevedo">
+            </label>
+          
+            <label id="placeSelected3" class="place" data-value="Interestellar en cine">
+              <input type="radio" name="place" value="Interestellar en cine">
+              <div>
+                <h3>Interestellar en cine</h3>
+                <p>
+                  Esta opción sí es un poco más común y quizá no tan "interesante" como las anteriores. Sin embargo, este año se reestrenó esta película en los cines debido a que hace 10 años fue su lanzamiento, y está en varios cines de Bogotá. La trama de la película es bastante buena, con una historia de viajes en el espacio, en el tiempo, y bueno, ya sabes cómo me gustan los viajes en el tiempo.
+                  <br>
+                  Una desventaja es que la función más temprana de esta película es a las 5 de la tarde, un horario tarde.
+                </p>
+              </div>
+              <img src="img/interestellar.jpg" alt="Chorro de quevedo">
+            </label>
+          
+            <label id="placeSelected4" class="place" data-value="otro">
+              <input type="radio" name="place" value="Otro">
+              <div>
+                <h3>Otro</h3>
+                <p>Si deseas mencionar otro lugar, me lo podrías hacer saber:</p>
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="width: 300px;" disabled></textarea>
+                  <label for="floatingTextarea2">Describe otro lugar</label>
+                </div>
+              </div>
+            </label>
+          
+            <button type="button" class="btn btn-warning" id="sendButton" data-bs-toggle="modal" data-bs-target="#staticBackdrop-1" disabled>
+              Enviar
+            </button>
+            <div class="modal fade" id="staticBackdrop-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Ventana de confirmación</h1>
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Recibido </h1>
                   </div>
                   <div class="modal-body">
-                    
-                    Presiona <b>confirmar</b> para confirmar tu respuesta
-    
+                    <p>He recibido tu respuesta, muy pronto recibiras una de parte mia.
+                      <br>
+                      <br>
+                      Sé que esta manera de invitarte a salir es un poco extraña, pero simplemente se me ocurrio y quise intentarlo. Espero no haya sido muy confuso 
+                      la interacción.
+                      <br>
+                      <br>
+                      Sí deseas comentarme algo lo puedes hacer en la caja de comentarios
+                      <br>
+                      <br>
+                       Si no es el caso solo cierra la ventana
+                       <br>
+                      <br>
+                       ATT: Kevin Aroca
+                    </p>
+      
+                    <div class="form-floating">
+                      <textarea class="form-control" placeholder="Leave a comment here" id="commentY" style="height: 100px"></textarea>
+                      <label for="commentY">Comentarios</label>
+                    </div>
+      
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal" id="confirm"><a href="#answerY">Confirmar</a></button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="https://www.youtube.com/watch?v=ZEcqHA7dbwM/">Cerrar</a></button>
+                    <button type="button" class="btn btn-warning" id="sendCommentY" disabled>Enviar</button>
                   </div>
                 </div>
               </div>
             </div>
-            
-        </span>
-        <span class="hideAnswerY" id="answerY">
-          <br>
-          <br>
-          <p>Me da mucho gusto que hayas aceptado mi propuesta.
-            <br>
-            Estuve pensando en que lugar te puede parecer mejor, pero no se cual te parezca
-            <br>
-            <br>
-            hmm... 
-            <br>
-            <br>
-            Ya se
-            <br>
-            <br>
-            A continuación se verán los diferentes lugares que tengo en mente con una descripción del porque lo tome en cuenta, escoge uno y presiona en el boton enviar que aparece en lo ultimo,  
-            en caso de que no te llame la atención alguno puedes seleccionar "otro" y mencionar otro lugar (La opción que selecciones me va a llegar a mí). 
-            <br>
-            <br>
-            Presiona en "Ver lugares".
-            <div id="seePlaces"><b><a href="#hidePlaces">Ver lugares</a></b></div>
-          </p>
-            <span id="hidePlaces" class="hidePlaces">
-              <label id="placeSelected1" class="place" data-value="El chorro de quevedo"><input type="radio" name="place" value="El chorro de quevedo"><div><h3>El chorro de quevedo</h3>
-                  
-                  <p>
-                      Escogí este lugar porque ha sido un lugar que me lo han mencionado mucho y el año pasado tuve muchas oportunidades de ir pero siempre se presentaba algún incoveninte para ir, el chorro de quevedo 
-                      a mi parecer me parece  un lugar bastante historico y simbolico, ademas, también recuerdo que estaba en alguna lista de cosas por hacer y sé que lo conoces como la palma de tu mano. 
+          </span>
           
-                     </p>
-                    </div><img src="img/chorroQuevedo.png" alt="Chorro de quevedo">
-              </label>      
-                
-                    <label id="placeSelected2" class="place" data-value="El parque de la 93"><input type="radio" name="place" value="El parque de la 93"><div ><h3>El parque de la 93</h3>
-                      
-                  <p>
-                    Escogí este lugar porque me lo habián mencionado y me parecio interesante ir, me dijeron que era bastante bonito y turistico, pero en realidad no he ido ni me he acercado, 
-                    casí igual que con el chorro de quevedo tuve oportunidades de ir, esta vez con samuel pero no se planeo nada finalmente.
-                    Me parece un lugar interesante viendo fotos del lugar. 
-                  </p>
-                </div><img src="img/parque93.png" alt="Chorro de quevedo">
-              </label>
-                <label id="placeSelected3" class="place" data-value="Interestellar en cine"><input type="radio" name="place" value="Interestellar en cine"><div ><h3>Interestellar en cine</h3>
-                  
-                  <p>
-                    Esta opción si es un poco mas común y quiza no tan "interesante" que las anteriores sin embargo este año se reestreno esta pelicula en los cines debido a que hace 10 años fue 
-                    su lanzamiento y está en varios cines de bogotá. La trama de la pelicula es bastante buena y con una trama de viajes en el espacio, en el tiempo y 
-                    bueno ya sabes como me gusta los viajes en el tiempo.
-                    <br>
-                    Una desventaja es que la función de esta pelicula mas temprana es a las 5 de la tarde un horario tarde. 
-                  </p>              
-                </div><img src="img/interestellar.jpg" alt="Chorro de quevedo">
-              </label>
-                <label id="placeSelected4" class="place" data-value="otro"><input type="radio" name="place" value="Otro"><div ><h3>Otro</h3>
-                  
-                  <p>Si deseas mencionar otro lugar me lo podrías hacer saber:</p>
-                  <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="width: 300px;" disabled></textarea>
-                    <label for="floatingTextarea2">Describe otro lugar</label>
-                  </div>
-                </div>
-              </label>
-  
-                <button type="button" class="btn btn-warning" id="sendButton" data-bs-toggle="modal" data-bs-target="#staticBackdrop-1" disabled>
-                  Enviar
-                </button>
-                
-                <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
+      </span>
+      <span class="hideAnswerN" id="answerN">
+          <div class="modal fade" id="staticBackdrop-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
                       <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Recibido </h1>
+                          <h1 class="modal-title fs-5" id="staticBackdropLabel">No te preocupes</h1>
                       </div>
                       <div class="modal-body">
-                        <p>He recibido tu respuesta, muy pronto recibiras una de parte mia.
-                          <br>
-                          <br>
-                          Sé que esta manera de invitarte a salir es un poco extraña, pero simplemente se me ocurrio y quise intentarlo. Espero no haya sido muy confuso 
-                          la interacción.
-                          <br>
-                          <br>
-                          Sí deseas comentarme algo lo puedes hacer en la caja de comentarios
-                          <br>
-                          <br>
-                           Si no es el caso solo cierra la ventana
-                           <br>
-                          <br>
-                           ATT: Kevin Aroca
-                        </p>
-
-                        <div class="form-floating">
-                          <textarea class="form-control" placeholder="Leave a comment here" id="commentY" style="height: 100px"></textarea>
-                          <label for="commentY">Comentarios</label>
-                        </div>
-
+                          <p>Está bien, no pasa nada. Te agradezco mucho por tomarte el tiempo de leer esto.
+                              <br>
+                              Si quieres decirme algo, puedes hacerlo abajo.
+                              <br>
+                              Si no, simplemente cierra esta ventana.
+                              <br>
+                              <br>
+                       ATT: Kevin Aroca
+                          </p>
+                          <div class="form-floating">
+                              <textarea class="form-control" placeholder="Deja un comentario aquí" id="comment" style="height: 100px"></textarea>
+                              <label for="comment">Comentario</label>
+                          </div>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-warning" id="sendCommentY" disabled>Enviar</button>
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><a href="https://www.youtube.com/watch?v=ZEcqHA7dbwM/">Cerrar</a></button>
+                          <button type="button" class="btn btn-warning" id="sendComment" disabled>Enviar</button>
                       </div>
-                    </div>
                   </div>
-                </div>
-              
-            </span>
-            
-                      
-           
-
-        </span>
-
-        <span class="hideAnswerN" id="answerN">
-        <div class="modal fade" id="staticBackdrop-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">No te preocupes</h1>
               </div>
-              <div class="modal-body">
-                <p>Vale no pasa nada, te agradezco de todas maneras por haberte tomado el tiempo de leer el texto.
-                  <br>
-                  Sí quieres decir algo lo puedes hacer abajo.
-                  <br>
-                  Si no es el caso solo cierra la ventana 
-                </p>
-
-                <div class="form-floating">
-                  <textarea class="form-control" placeholder="Leave a comment here" id="comment" style="height: 100px"></textarea>
-                  <label for="comment">Comentario</label>
-                </div>
-
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-warning" id="sendComment" disabled>Enviar</button>
-              </div>
-            </div>
           </div>
-        </div>
       </span>
-        
-    </span>
+      
+  </span>
 
-    <footer>
+  <footer>
 
-    </footer>
+  </footer>
 
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="js/sendComments.js"></script>
-<script src="js/sendAnswer.js"></script>
-    <script src="js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/sendComments.js"></script>
+  <script src="js/sendAnswer.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

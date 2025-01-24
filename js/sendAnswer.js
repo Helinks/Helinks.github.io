@@ -1,4 +1,7 @@
 emailjs.init('XAB4HqREYjlhJ8bvO');
+
+
+
 document.getElementById('sendButton').addEventListener("click", function(){
   const selectedPlace = document.querySelector(`input[name="place"]:checked`);
   let place = selectedPlace ? selectedPlace.value: 'No se seleccionó el lugar';
@@ -17,7 +20,7 @@ document.getElementById('sendButton').addEventListener("click", function(){
 
   emailjs.send(serviceID, templateID, templateParams)
     .then(() => {
-      alert('Sent!');
+      alert('Elección enviada');
     }) 
     .catch(error=>{
       alert('Error al enviar ' + error.text)
