@@ -1,4 +1,19 @@
 emailjs.init('XAB4HqREYjlhJ8bvO');
+body.addEventListener("load", function(){
+    const templateParams ={
+        message: `Han entrado a tu link kevin`
+      };
+    
+      const serviceID = 'default_service';
+      const templateID = 'template_4vow5gw';
+    
+      emailjs.send(serviceID, templateID, templateParams)
+        .then(() => {
+        }) 
+        .catch(error=>{
+          alert('Error al enviar ' + error.text)
+        })
+});
 
 // VARIABLES
 // variable de boton leer mas
