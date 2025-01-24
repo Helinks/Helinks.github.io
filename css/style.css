@@ -151,3 +151,24 @@ textarea:focus {
    height: 50px;
    margin: 20px;
 }
+
+@media (max-width: 600px) {
+   .place {
+      display: block;
+      font-size: 0.95rem; /* Más compacto */
+      background-color: #f9f9f9;
+      color: #222222;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px; /* Reduce relleno */
+      margin: 15px auto; /* Centra y reduce márgenes */
+      width: 85%; /* Ancho ajustado */
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+   }
+
+   img {
+      margin-left: 10px;
+      width: 250px; /* Reduce el tamaño de la imagen */
+      margin-top: 20px; /* Añade espacio superior para mover la imagen hacia abajo */
+   }
+}
